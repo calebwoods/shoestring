@@ -1,6 +1,6 @@
 # Shoestring
 
-TODO: Write a gem description
+Automate setting up Rails development environment including external dependencies.
 
 ## Installation
 
@@ -18,7 +18,8 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+TODO: Add examples
+TODO: Add generator to get started
 
 ## Contributing
 
