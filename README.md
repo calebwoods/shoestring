@@ -21,6 +21,11 @@ Or install it yourself as:
 TODO: Add examples
 TODO: Add generator to get started
 
+## TODO
+
+* Link specific versions with Homebrew
+* Check for specific DB versions
+
 ## Contributing
 
 1. Fork it
