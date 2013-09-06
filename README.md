@@ -25,6 +25,8 @@ TODO: Add generator to get started
 
 * Link specific versions with Homebrew
 * Check for specific DB versions
+* Default pow host name to current dir
+* Auto install pow
 
 ## Contributing
 
