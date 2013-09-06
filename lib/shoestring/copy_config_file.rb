@@ -1,3 +1,5 @@
+require 'fileutils'
+
 module Shoestring
   class CopyConfigFile < Base
     attr_reader :name, :source_file, :destination_file
