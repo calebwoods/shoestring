@@ -1,10 +1,6 @@
 module Shoestring
-  class Generic
+  class Generic < Base
     attr_reader :name, :message, :block
-
-    def self.check(*args, &block)
-      self.new(*args, &block).check
-    end
 
     def initialize(name, message="Unable to check #{name}", &block)
       @name = name
@@ -16,5 +12,6 @@ module Shoestring
       block.call || abort(message)
       puts "#{name}: check!"
     end
+
   end
 end

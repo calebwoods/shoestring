@@ -1,10 +1,6 @@
 module Shoestring
-  class Cache
+  class Cache < Base
     attr_reader :key, :block
-
-    def self.check(*args, &block)
-      self.new(*args, &block).check
-    end
 
     def initialize(key, &block)
       @key = key
@@ -24,5 +20,6 @@ module Shoestring
     def old_version
       File.exists?(cache_file) ? File.read(cache_file) : nil
     end
+
   end
 end

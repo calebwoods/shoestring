@@ -1,10 +1,6 @@
 module Shoestring
-  class Homebrew
+  class Homebrew < Base
     attr_reader :name, :url, :brew_cmd, :block
-
-    def self.check(*args, &block)
-      self.new(*args, &block).check
-    end
 
     def initialize(name, url, brew_cmd, &block)
       @name = name
@@ -51,5 +47,6 @@ module Shoestring
     def abort_message
       abort "Install #{name} and rerun"
     end
+
   end
 end
