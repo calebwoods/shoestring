@@ -3,7 +3,7 @@ module Shoestring
     attr_reader :host_name
 
     def initialize(host_name)
-      @host_name = home_name
+      @host_name = host_name
     end
 
     def check
