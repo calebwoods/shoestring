@@ -22,6 +22,7 @@ module Shoestring
       Shoestring::Cache.check(:bundle) do |old_version|
         version = File.read('Gemfile') + File.read('Gemfile.lock')
         if old_version != version
+          puts "Bundle out of date. Updating..."
           system('bundle install --quiet') || abort('Failed to bundle install')
         end
         version
