@@ -10,12 +10,11 @@ module Shoestring
 
     def install_bundler
       Shoestring::Generic.check('Bundler') do
-        if system('bundle --version 2>&1')
-          true
-        else
+        unless system('bundle --version 2>&1')
           puts "Unable to find bundler.  Installing..."
           system('gem install bundler')
         end
+        true
       end
     end
 

@@ -2,7 +2,7 @@ module Shoestring
   class PowDns < Base
     attr_reader :port
 
-    def initalize(port = 3000)
+    def initialize(port = 3000)
       @port = port
     end
 
