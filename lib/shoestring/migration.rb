@@ -20,7 +20,11 @@ module Shoestring
 
     def check_schema
       Shoestring::Cache.check(:schema) do |old_version|
-        version = File.readlines("db/schema.rb").find { |line| line.include?("define(:version") }
+        if File.exist?("db/schema.rb")
+          version = File.readlines("db/schema.rb").find { |line| line.include?("define(:version") }
+        else
+          version = File.readlines("db/structure.sql").last
+        end
         if old_version != version
           system("bundle exec rake db:migrate") || abort("bundle exec rake db:migrate failed")
         end
