@@ -25,7 +25,7 @@ module Shoestring
         else
           version = File.readlines("db/structure.sql").last
         end
-        if old_version != version
+        if old_version.strip != version.strip
           system("bundle exec rake db:migrate") || abort("bundle exec rake db:migrate failed")
         end
         version
