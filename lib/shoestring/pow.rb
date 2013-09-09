@@ -7,7 +7,17 @@ module Shoestring
     end
 
     def check
+      install_pow
       system("powder link #{host_name}")
+    end
+
+    private
+
+    def install_pow
+      unless system("ps x | grep '[p]ow' > /dev/null")
+        puts "Installing pow..."
+        system("powder install")
+      end
     end
 
   end
