@@ -2,7 +2,7 @@ module Shoestring
   class Pow < Base
     attr_reader :host_name
 
-    def initialize(host_name)
+    def initialize(host_name = `basename $PWD`)
       @host_name = host_name
     end
 
