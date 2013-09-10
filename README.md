@@ -1,3 +1,5 @@
+[![Code Climate](https://codeclimate.com/github/calebwoods/shoestring.png)](https://codeclimate.com/github/calebwoods/shoestring)
+
 # Shoestring
 
 Automate setting up Rails development environment including external dependencies.
