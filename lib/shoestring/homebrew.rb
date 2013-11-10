@@ -15,8 +15,7 @@ module Shoestring
       else
         puts "You need to setup #{name} #{url}"
 
-        homebrew_installed = %x(brew -v)
-        if homebrew_installed
+        if system('brew -v')
           install_with_homebrew
         else
           install_homebrew
