@@ -9,12 +9,21 @@ module Shoestring
 
     def check
       version = block.call(old_version)
-      File.open(cache_file, 'w') { |f| f.puts(version || 'cached') }
+      write_version(version)
     end
 
     private
+    def write_version(version)
+      FileUtils.mkdir_p(cache_directory)
+      File.open(cache_file, 'w') { |f| f.puts(version || 'cached') }
+    end
+
     def cache_file
-      "tmp/.#{key}"
+      "#{cache_directory}/.#{key}"
+    end
+
+    def cache_directory
+      'tmp'
     end
 
     def old_version
