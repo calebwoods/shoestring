@@ -11,7 +11,7 @@ module Shoestring
     end
 
     def check
-      unless File.exists?(destination_file)
+      unless File.exist?(destination_file)
         FileUtils.cp source_file, destination_file
       end
       puts "#{name}: check!"
