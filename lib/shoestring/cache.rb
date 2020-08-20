@@ -27,7 +27,7 @@ module Shoestring
     end
 
     def old_version
-      File.exists?(cache_file) ? File.read(cache_file) : nil
+      File.exist?(cache_file) ? File.read(cache_file) : nil
     end
 
   end

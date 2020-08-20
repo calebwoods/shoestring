@@ -10,7 +10,7 @@ describe Shoestring::Cache do
         'cached_value'
       end
 
-      File.exists?('tmp/.test').must_equal true
+      File.exist?('tmp/.test').must_equal true
     end
 
     it "doesn't run when cache is the same" do
